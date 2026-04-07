@@ -144,7 +144,6 @@
             font-weight: 300;
             font-size: 86px;
             line-height: 110%;
-
             text-transform: uppercase;
         }
     }
@@ -290,7 +289,7 @@
 
     &__content {
         position: relative;
-        background: url('/img/problems-bg.jpg') no-repeat top center transparent;
+        background: url('../img/problems-bg.jpg') no-repeat top center transparent;
         background-size: contain;
 
         &>h2 {
