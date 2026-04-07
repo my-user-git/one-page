@@ -1,0 +1,264 @@
+/* common */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar-thumb {
+    /* Цвет скроллбара */
+    background: var(--orange);
+    /* Радиус скругления скроллбара */
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar {
+    /* Ширина вертикального скроллбара */
+    width: 8px;
+    /* Высота горизонтального скроллбара */
+    height: 4px;
+    /* Цвет фона под скроллбаром */
+    background: #0F0F0F;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+picture:focus,
+img:focus,
+div:focus,
+svg:focus {
+    outline: none;
+}
+
+button,
+input {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: var(--container-maxwidth);
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* buttons */
+
+.default-button-black {
+    padding: 15px 30px;
+    font-family: var(--font-family-bold);
+    font-weight: 700;
+    font-size: 19px;
+    text-align: center;
+    color: var(--white);
+    border-radius: 15px;
+    background-color: var(--black);
+}
+
+/* section */
+
+section {
+
+    &>div {
+
+        &>h2 {
+            margin-bottom: 50px;
+            font-family: var(--font-family-bold);
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 130%;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--black);
+
+            &~p {
+                margin-bottom: 30px;
+                text-align: center;
+                font-family: var(--font-family-light);
+                font-weight: 300;
+                font-size: 35px;
+                line-height: 130%;
+                color: var(--black);
+            }
+        }
+    }
+}
+
+/* sticky */
+
+.default-sticky-header {
+    position: sticky;
+    top: 50px;
+}
+
+/* parallax */
+
+.default-parallax-slide {
+    position: sticky;
+    top: 80px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.default-parallax-slide:nth-child(1),
+.default-parallax-slide:nth-child(2),
+.default-parallax-slide:nth-child(3) {
+    height: auto;
+    // height: 579px;
+    // min-height: 579px;
+    // max-height: 579px;
+}
+
+.default-parallax-slide:nth-child(1) {
+    z-index: 1;
+}
+
+.default-parallax-slide:nth-child(2) {
+    z-index: 2;
+}
+
+.default-parallax-slide:nth-child(3) {
+    z-index: 3;
+}
+
+/* tabs */
+
+.tabs {
+    width: 100%;
+}
+
+.tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.tabs-nav li {
+    text-align: center;
+    padding: 20px 30px;
+    font-family: var(--font-family-bold);
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 130%;
+    color: var(--textgrey);
+    border-radius: 15px;
+    background-color: var(--white);
+    border: 1px solid var(--strokegrey);
+    cursor: pointer;
+}
+
+.tabs-nav li.active {
+    color: white;
+    border-color: var(--orange);
+    background-color: var(--orange);
+}
+
+.tabs-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* contrast */
+
+.default-contrast {
+    position: relative;
+    width: 100%;
+    height: 672px;
+    overflow: hidden;
+}
+
+.default-contrast-before,
+.default-contrast-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.default-contrast img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.default-contrast-after {
+    clip-path: inset(0 100% 0 0);
+}
+
+.default-contrast-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: white;
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+.default-contrast-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
