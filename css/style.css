@@ -1240,6 +1240,9 @@ section > div > h2 ~ p {
 }
 
 /* products */
+.products {
+  margin-bottom: 200px;
+}
 .products__content {
   display: grid;
   grid-template-areas: "h2 content" "p content" "button content";
@@ -1258,6 +1261,9 @@ section > div > h2 ~ p {
 }
 .products__list {
   grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .products__list > li {
   padding: 30px;
@@ -1271,7 +1277,7 @@ section > div > h2 ~ p {
   grid-row: 1;
   z-index: 2;
 }
-.products__list .tabs > h3 {
+.products__list .tabs-wrap > h3 {
   margin: 0;
   font-family: var(--font-family-bold);
   font-weight: 700;
@@ -1279,20 +1285,27 @@ section > div > h2 ~ p {
   line-height: 130%;
   color: var(--black);
 }
-.products__list .tabs > p {
+.products__list .tabs-wrap > p {
+  margin-bottom: 30px;
   font-family: var(--font-family-light);
   font-weight: 300;
   font-size: 19px;
   line-height: 140%;
   color: var(--black);
 }
+.products__list .tabs-nav {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--btngrey);
+}
 .products__list .tabs-nav > li {
   padding: 0;
+  text-align: left;
   font-family: var(--font-family-light);
   font-weight: 300;
   font-size: 19px;
   line-height: 130%;
   border-radius: 0;
+  border: none;
   background-color: transparent;
 }
 .products__list .tabs-nav > li.active {
@@ -1308,6 +1321,7 @@ section > div > h2 ~ p {
   display: grid;
   grid-template-columns: 28% 1fr;
   align-items: start;
+  gap: 30px;
   padding: 0;
   border: none;
 }
@@ -1316,24 +1330,39 @@ section > div > h2 ~ p {
   display: grid;
   grid-template-columns: 28% 1fr;
   grid-area: 1/1/3/3;
+  gap: 30px;
   display: none;
   z-index: 0;
 }
 .products__list .tabs-content .tab-pane ul {
   grid-area: 1/2/2/3;
 }
+.products__list .tabs-content .tab-pane ul li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family-light);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 140%;
+  color: var(--black);
+}
 .products__list .tabs-content .tab-pane.active {
   display: grid;
 }
 .products__list .tabs-content .tab-pane img {
-  grid-area: 1/1/2/2;
+  grid-area: 1/1/3/2;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  align-self: stretch;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.products__list .tabs > a {
+.products__list .tabs-content .tab-pane > a {
   grid-column: 2/3;
-  grid-row: 5;
+  grid-row: 2;
+  justify-self: flex-start;
 }/*# sourceMappingURL=style.css.map */
