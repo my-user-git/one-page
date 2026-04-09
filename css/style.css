@@ -1245,22 +1245,39 @@ section > div > h2 ~ p {
 }
 .products__content {
   display: grid;
-  grid-template-areas: "h2 content" "p content" "button content";
   grid-template-columns: 1fr 74.62%;
   align-items: flex-start;
   gap: 33px;
 }
-.products__content h2 {
-  grid-area: h2;
+.products__wrap h2 {
+  margin-bottom: 47px;
+  font-family: var(--font-family-bold);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: var(--black);
 }
-.products__content > p {
-  grid-area: p;
+.products__wrap > p {
+  margin-bottom: 20px;
+  font-family: var(--font-family-light);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 140%;
+  color: var(--black);
 }
-.products__content > button {
-  grid-area: button;
+.products__wrap > button {
+  padding: 20px 25px;
+  border-radius: 15px;
+  font-family: var(--font-family-bold);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--orange);
 }
 .products__list {
-  grid-area: content;
   display: flex;
   flex-direction: column;
   gap: 20px;
