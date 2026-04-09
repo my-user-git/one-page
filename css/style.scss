@@ -915,6 +915,7 @@
                 border-bottom: 1px solid var(--btngrey);
 
                 &>li {
+                    position: relative;
                     padding: 0;
                     text-align: left;
                     font-family: var(--font-family-light);
@@ -933,6 +934,20 @@
                     line-height: 130%;
                     color: var(--black);
                     border: none;
+
+                    & span {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            bottom: -12px;
+                            left: 0;
+                            border-bottom: 4px solid var(--orange);
+                        }
+
+                    }
                 }
             }
 

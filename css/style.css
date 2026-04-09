@@ -1315,6 +1315,7 @@ section > div > h2 ~ p {
   border-bottom: 1px solid var(--btngrey);
 }
 .products__list .tabs-nav > li {
+  position: relative;
   padding: 0;
   text-align: left;
   font-family: var(--font-family-light);
@@ -1332,6 +1333,17 @@ section > div > h2 ~ p {
   line-height: 130%;
   color: var(--black);
   border: none;
+}
+.products__list .tabs-nav > li.active span {
+  position: relative;
+}
+.products__list .tabs-nav > li.active span::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: -12px;
+  left: 0;
+  border-bottom: 4px solid var(--orange);
 }
 .products__list .tabs-content {
   position: relative;
