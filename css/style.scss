@@ -860,9 +860,18 @@
             border-radius: 20px;
             background-color: var(--white);
             box-shadow: 0px 6px 20px 0px #3A17001A;
+        }
+
+        & .tabs {
+            position: relative;
+            display: grid;
+            grid-template-columns: 28% 1fr;
+            align-items: start;
 
             &>h3 {
-                margin-bottom: 10px;
+                grid-column: 2 / 3;
+                grid-row: 1;
+                margin: 0;
                 font-family: var(--font-family-bold);
                 font-weight: 700;
                 font-size: 23px;
@@ -871,18 +880,18 @@
             }
 
             &>p {
-                margin-bottom: 30px;
+                grid-column: 2 / 3;
+                grid-row: 2;
                 font-family: var(--font-family-light);
                 font-weight: 300;
                 font-size: 19px;
                 line-height: 140%;
                 color: var(--black);
             }
-        }
-
-        & .tabs {
 
             &-nav {
+                grid-column: 2 / 3;
+                grid-row: 3;
 
                 &>li {
                     padding: 0;
@@ -902,6 +911,42 @@
                     color: var(--black);
                     border: none;
                 }
+            }
+
+            &-content {
+                position: relative;
+                grid-column: 1 / 3;
+                grid-row: 4;
+                padding: 0;
+                border: none;
+
+                & .tab-pane {
+                    position: relative;
+                    display: none;
+                    grid-template-columns: 28% 1fr;
+
+                    & ul {
+                        grid-area: 1 / 2 / 2 / 3;
+                    }
+
+                    &.active {
+                        display: grid;
+                    }
+
+                    & img {
+                        position: absolute;
+                        grid-area: 1 / 1 / 2 / 2;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        align-self: stretch;
+                    }
+                }
+            }
+
+            &>a {
+                grid-column: 2 / 3;
+                grid-row: 5;
             }
         }
     }
