@@ -405,6 +405,7 @@ p {
 }
 
 /* section */
+[class$=__content] > div > h2,
 section > div > h2 {
   margin-bottom: 50px;
   font-family: var(--font-family-bold);
@@ -415,6 +416,7 @@ section > div > h2 {
   text-transform: uppercase;
   color: var(--black);
 }
+[class$=__content] > div > h2 ~ p,
 section > div > h2 ~ p {
   margin-bottom: 30px;
   text-align: center;
