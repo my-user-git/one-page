@@ -134,9 +134,15 @@ section {
 
 /* parallax */
 
+.default-parallax-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .default-parallax-slide {
     position: sticky;
-    top: 80px;
+    top: 117px;
     overflow-y: auto;
     transition: all 0.3s ease;
 }

@@ -316,9 +316,9 @@
         }
 
         & img {
-            width: 100%; 
-            height: auto; 
-            max-width: 100%; 
+            width: 100%;
+            height: auto;
+            max-width: 100%;
             max-height: none;
             margin-top: -182px;
         }
@@ -871,9 +871,9 @@
         &>.products__wrap {
 
             &>h2 {
-               text-align: left;
+                text-align: left;
             }
-    
+
             &>p {
                 margin-bottom: 20px;
                 text-align: left;
@@ -883,7 +883,7 @@
                 line-height: 140%;
                 color: var(--black);
             }
-    
+
             &>button {
                 padding: 20px 25px;
                 border-radius: 15px;
@@ -1033,6 +1033,51 @@
                     }
                 }
             }
+        }
+    }
+
+    &__simple {
+        display: grid;
+        grid-template-areas:
+            "img h3"
+            "img p"
+            "img ul"
+            "img a";
+        grid-template-columns: 28% 1fr;
+        column-gap: 30px;
+
+        &>img {
+            grid-area: img;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            object-fit: contain;
+        }
+
+        &>h3 {
+            grid-area: h3;
+            margin: 0;
+            font-family: var(--font-family-bold);
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 130%;
+            color: var(--black);
+        }
+
+        &>p {
+            grid-area: p;
+            margin-bottom: 30px;
+            font-family: var(--font-family-light);
+            font-weight: 300;
+            font-size: 19px;
+            line-height: 140%;
+            color: var(--black);
+        }
+
+        &>a {
+            grid-area: a;
         }
     }
 }
