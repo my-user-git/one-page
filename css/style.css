@@ -1324,6 +1324,9 @@ section > div > h2 ~ p {
   position: relative;
   grid-column: 2/3;
   grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   z-index: 2;
 }
 .products__list .tabs-wrap > h3 {
@@ -1431,8 +1434,11 @@ section > div > h2 ~ p {
   display: grid;
   grid-template-areas: "img h3" "img p" "img ul" "img a";
   grid-template-columns: 28% 1fr;
+  justify-content: flex-start;
+  align-items: flex-start;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  row-gap: 10px;
 }
 .products__simple > img {
   grid-area: img;
@@ -1455,13 +1461,39 @@ section > div > h2 ~ p {
 }
 .products__simple > p {
   grid-area: p;
-  margin-bottom: 30px;
   font-family: var(--font-family-light);
   font-weight: 300;
   font-size: 19px;
   line-height: 140%;
   color: var(--black);
 }
+.products__simple > ul {
+  grid-area: ul;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.products__simple > ul li {
+  position: relative;
+  padding-left: 20px;
+  font-family: var(--font-family-light);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 140%;
+  color: var(--black);
+}
+.products__simple > ul li::before {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 0;
+  width: 8px;
+  height: 12px;
+  border-right: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
+  transform: rotate(45deg);
+}
 .products__simple > a {
   grid-area: a;
+  justify-self: flex-start;
 }/*# sourceMappingURL=style.css.map */
