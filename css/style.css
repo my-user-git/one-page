@@ -794,19 +794,48 @@ section > div > h2 ~ p {
 .problems {
   margin-bottom: 176px;
 }
+.problems__wrap {
+  z-index: 0;
+  overflow: visible;
+}
+.problems__wrap h2 {
+  position: relative;
+  margin-bottom: 50px;
+  font-family: var(--font-family-bold);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--black);
+  z-index: 1;
+}
+.problems__wrap p {
+  position: relative;
+  font-family: var(--font-family-light);
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--black);
+  z-index: 1;
+}
+.problems__wrap img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  margin-top: -182px;
+}
 .problems__content {
   position: relative;
-  background: url("../img/problems-bg.jpg") no-repeat top center transparent;
-  background-size: contain;
-}
-.problems__content > h2 {
-  z-index: 0;
 }
 .problems__content > ul {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: 142px;
+  margin-top: -480px;
   z-index: 1;
 }
 .problems__content > ul > li {
