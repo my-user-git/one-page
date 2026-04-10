@@ -1280,24 +1280,19 @@ section > div > h2 ~ p {
   align-items: flex-start;
   gap: 33px;
 }
-.products__wrap h2 {
-  margin-bottom: 47px;
-  font-family: var(--font-family-bold);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 130%;
-  text-transform: uppercase;
-  color: var(--black);
+.products__content > .products__wrap > h2 {
+  text-align: left;
 }
-.products__wrap > p {
+.products__content > .products__wrap > p {
   margin-bottom: 20px;
+  text-align: left;
   font-family: var(--font-family-light);
   font-weight: 300;
   font-size: 19px;
   line-height: 140%;
   color: var(--black);
 }
-.products__wrap > button {
+.products__content > .products__wrap > button {
   padding: 20px 25px;
   border-radius: 15px;
   font-family: var(--font-family-bold);
