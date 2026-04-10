@@ -744,18 +744,6 @@
                     line-height: 140%;
                     color: var(--black);
                 }
-
-                & button {
-                    padding: 20px 25px;
-                    border-radius: 15px;
-                    font-family: var(--font-family-bold);
-                    font-weight: 700;
-                    font-size: 19px;
-                    line-height: 130%;
-                    text-align: center;
-                    color: var(--white);
-                    background-color: var(--orange);
-                }
             }
 
             &-nav {
@@ -1113,6 +1101,69 @@
         &>a {
             grid-area: a;
             justify-self: flex-start;
+        }
+    }
+}
+
+/* buy */
+
+.buy {
+    margin-bottom: 160px;
+    background: url('../img/buy-bg.jpg') no-repeat right bottom transparent;
+    background-size: contain;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+
+        // & img {
+        //     grid-area: img;
+        //     position: absolute;
+        //     right: 0;
+        //     bottom: 0;
+        //     display: block;
+        //     height: 100%;
+        //     object-fit: cover;
+        //     z-index: 0;
+        // }
+
+        &>h2 {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        &>p {
+            display: flex;
+            width: 49.5%;
+            flex-direction: column;
+            justify-self: flex-start;
+            text-align: left;
+
+            & span {
+                margin-top: 30px;
+                font-family: var(--font-family-light);
+                font-weight: 300;
+                font-size: 19px;
+                line-height: 140%;
+                color: var(--black);
+            }
+        }
+
+        &>ul {
+            grid-area: ul;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            &>li {
+
+                &>a {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
         }
     }
 }

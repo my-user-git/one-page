@@ -95,6 +95,18 @@ p {
     background-color: var(--black);
 }
 
+.default-button-orange {
+    padding: 20px 25px;
+    border-radius: 15px;
+    font-family: var(--font-family-bold);
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
 /* section */
 
 [class$="__content"],
