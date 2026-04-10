@@ -1160,6 +1160,15 @@
 
 .history {
 
+    & h2 {
+        text-align: left;
+
+        &~p {
+            text-align: left;
+        }
+    }
+
+
     &__wrap {
         position: relative;
         margin-bottom: 100px;

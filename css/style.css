@@ -1541,6 +1541,12 @@ section > div > h2 ~ p {
 }
 
 /* history */
+.history h2 {
+  text-align: left;
+}
+.history h2 ~ p {
+  text-align: left;
+}
 .history__wrap {
   position: relative;
   margin-bottom: 100px;
