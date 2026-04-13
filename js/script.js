@@ -1,4 +1,31 @@
 $(document).ready(function () {
+    var header = $('header '),
+        scrollPrev = 0;
+
+    $(window).scroll(function () {
+        var scrolled = $(window).scrollTop();
+
+        if (scrolled > 100 && scrolled > scrollPrev) {
+            header.addClass('out');
+        } else {
+            header.removeClass('out');
+        }
+        scrollPrev = scrolled;
+    });
+
+    $(window).on("scroll", function () {
+        var scrolled = $(this).scrollTop();
+        if (scrolled > 107) {
+            $('header').addClass('scrolled');
+        }
+        if (scrolled <= 107) {
+            $('header').removeClass('scrolled');
+        }
+    });
+
+})
+
+$(document).ready(function () {
     // Функция центрирования для слайдера
     function centerSlider($container) {
         var $slider = $container.find('.default-contrast-btn');

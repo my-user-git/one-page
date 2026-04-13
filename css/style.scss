@@ -45,7 +45,20 @@
 
 /* header */
 
+
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+
+    &.scrolled {}
+
+    &.out {
+        transform: translateY(-100%);
+    }
 
     &__content {
         display: grid;
@@ -56,7 +69,6 @@
         gap: 20px 30px;
         align-items: center;
         padding-top: 20px;
-        margin-bottom: 70px;
         padding-bottom: 12px;
     }
 
@@ -120,6 +132,12 @@
             }
         }
     }
+}
+
+/* main */
+
+main {
+    margin-top: calc(146px + 70px);
 }
 
 /* hero */
