@@ -54,8 +54,6 @@
     z-index: 10;
     transition: all 0.3s ease-in-out;
 
-    &.scrolled {}
-
     &.out {
         transform: translateY(-100%);
     }
@@ -70,6 +68,23 @@
         align-items: center;
         padding-top: 20px;
         padding-bottom: 12px;
+    }
+
+    &.scrolled &__content {
+        grid-template-areas:
+            "nav button";
+        grid-template-columns: 1fr max-content;
+
+        & .header__logo,
+        & .header__email,
+        & .header__tel {
+            display: none;
+        }
+        
+        & .header__nav {
+            padding-top: 0;
+            border: none;
+        }
     }
 
     &__logo {

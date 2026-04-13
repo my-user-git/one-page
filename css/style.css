@@ -634,6 +634,17 @@ section > div > h2 ~ p {
   padding-top: 20px;
   padding-bottom: 12px;
 }
+.header.scrolled .header__content {
+  grid-template-areas: "nav button";
+  grid-template-columns: 1fr max-content;
+}
+.header.scrolled .header__content .header__logo, .header.scrolled .header__content .header__email, .header.scrolled .header__content .header__tel {
+  display: none;
+}
+.header.scrolled .header__content .header__nav {
+  padding-top: 0;
+  border: none;
+}
 .header__logo {
   grid-area: logo;
 }
