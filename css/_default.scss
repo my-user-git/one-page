@@ -286,9 +286,17 @@ section {
 
 .swiper-slide {
     width: auto;
+    height: auto;
+    padding: 25px 42px;
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 0px 6px 20px 0px #3A17001A;
+    box-sizing: border-box;
 
     & img {
         display: block;
-
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 }

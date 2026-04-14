@@ -1288,15 +1288,21 @@ main {
     &-swiper {
 
         &__wrapper {
-            padding: 20px 0;
+            height: 105px;
+            padding: 25px 0;
         }
+    }
+}
 
-        &__slide {
-            height: auto;
-            padding: 15px 20px;
-            border-radius: 20px;
-            background-color: var(--white);
-            box-shadow: 0px 6px 20px 0px #3A17001A;
+/* use */
+
+.use {
+
+    &-swiper {
+
+        &__wrapper {
+            height: 105px;
+            padding: 20px 0;
         }
     }
 }

@@ -581,9 +581,19 @@ section > div > h2 ~ p {
 /* swiper */
 .swiper-slide {
   width: auto;
+  height: auto;
+  padding: 25px 42px;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 0px 6px 20px 0px rgba(58, 23, 0, 0.1019607843);
+  box-sizing: border-box;
 }
 .swiper-slide img {
   display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @font-face {
@@ -1651,12 +1661,12 @@ main {
   color: var(--black);
 }
 .history-swiper__wrapper {
-  padding: 20px 0;
+  height: 105px;
+  padding: 25px 0;
 }
-.history-swiper__slide {
-  height: auto;
-  padding: 15px 20px;
-  border-radius: 20px;
-  background-color: var(--white);
-  box-shadow: 0px 6px 20px 0px rgba(58, 23, 0, 0.1019607843);
+
+/* use */
+.use-swiper__wrapper {
+  height: 105px;
+  padding: 20px 0;
 }/*# sourceMappingURL=style.css.map */

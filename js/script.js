@@ -229,8 +229,33 @@ const historySwiper = new Swiper('.history-swiper', {
     //     prevEl: '.card__button-prev',
     // },
 
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+});
+
+const useSwiper = new Swiper('.use-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    freeMode: true,  
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    speed: 300,
+
+    // pagination: {
+    //     el: '.card__swiper-pagination',
+    //     clickable: true,
+    //     type: 'bullets',
+    // },
+
+    // navigation: {
+    //     nextEl: '.card__button-next',
+    //     prevEl: '.card__button-prev',
+    // },
+
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
 });
