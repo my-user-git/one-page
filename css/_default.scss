@@ -281,3 +281,14 @@ section {
     border-radius: 50%;
     border: 2px solid #ccc;
 }
+
+/* swiper */
+
+.swiper-slide {
+    width: auto;
+
+    & img {
+        display: block;
+
+    }
+}

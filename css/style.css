@@ -578,6 +578,14 @@ section > div > h2 ~ p {
   border: 2px solid #ccc;
 }
 
+/* swiper */
+.swiper-slide {
+  width: auto;
+}
+.swiper-slide img {
+  display: block;
+}
+
 @font-face {
   font-family: "RobotoCondensed-Bold";
   src: url("../fonts/RobotoCondensed-Bold.woff") format("woff");
@@ -1567,6 +1575,9 @@ main {
 }
 
 /* history */
+.history {
+  margin-bottom: 180px;
+}
 .history h2 {
   text-align: left;
 }
@@ -1630,4 +1641,22 @@ main {
 }
 .history__wrap > ul li:nth-child(even) {
   transform: translateY(50%);
+}
+.history h3 {
+  margin-bottom: 35px;
+  font-family: var(--font-family-bold);
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 130%;
+  color: var(--black);
+}
+.history-swiper__wrapper {
+  padding: 20px 0;
+}
+.history-swiper__slide {
+  height: auto;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 0px 6px 20px 0px rgba(58, 23, 0, 0.1019607843);
 }/*# sourceMappingURL=style.css.map */
