@@ -218,17 +218,6 @@ const historySwiper = new Swiper('.history-swiper', {
     spaceBetween: 10,
     speed: 300,
 
-    // pagination: {
-    //     el: '.card__swiper-pagination',
-    //     clickable: true,
-    //     type: 'bullets',
-    // },
-
-    // navigation: {
-    //     nextEl: '.card__button-next',
-    //     prevEl: '.card__button-prev',
-    // },
-
     // autoplay: {
     //     delay: 3000,
     //     disableOnInteraction: false,
@@ -243,19 +232,29 @@ const useSwiper = new Swiper('.use-swiper', {
     spaceBetween: 10,
     speed: 300,
 
-    // pagination: {
-    //     el: '.card__swiper-pagination',
-    //     clickable: true,
-    //     type: 'bullets',
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
     // },
+});
 
-    // navigation: {
-    //     nextEl: '.card__button-next',
-    //     prevEl: '.card__button-prev',
-    // },
+const userutubeSwiper = new Swiper('.use-rutube-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    freeMode: true,  
+    slidesPerView: 2,
+    spaceBetween: 20,
+    speed: 300,
+    slidesPerGroup: 2,
 
     // autoplay: {
     //     delay: 3000,
     //     disableOnInteraction: false,
     // },
+});
+
+$('.video-trigger').one('click', function() {
+    var videoUrl = $(this).data('video');
+    
+    $(this).html('<iframe width="100%" height="100%" src="' + videoUrl + '" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
 });
