@@ -218,10 +218,10 @@ const historySwiper = new Swiper('.history-swiper', {
     spaceBetween: 10,
     speed: 300,
 
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 });
 
 const useSwiper = new Swiper('.use-swiper', {
@@ -232,10 +232,10 @@ const useSwiper = new Swiper('.use-swiper', {
     spaceBetween: 10,
     speed: 300,
 
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
 });
 
 const userutubeSwiper = new Swiper('.use-rutube-swiper', {
